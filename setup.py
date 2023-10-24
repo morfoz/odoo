@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import subprocess
 from setuptools import find_packages, setup
 from os.path import join, dirname
+
+#added lines
+subprocess.check_call(["python", "-m", "pip", "install", "--upgrade", "pip"])
+#end added lines
 
 
 exec(open(join(dirname(__file__), 'odoo', 'release.py'), 'rb').read())  # Load release variables
